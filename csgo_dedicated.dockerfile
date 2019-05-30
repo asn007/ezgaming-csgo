@@ -13,10 +13,10 @@ ENV SRCDS_RCONPW="changeme"
 ENV SRCDS_PW="changeme"
 ENV SRCDS_NAME="yolo"
 
-RUN mkdir /opt/csgo/deploy
+RUN mkdir /deploy
 
-COPY ./deploy /opt/csgo/deploy
-RUN chmod +x /opt/csgo/deploy/start_cs_server.sh
+COPY ./deploy /deploy
+RUN chmod +x /deploy/start_cs_server.sh
 
 EXPOSE 27015 27015/udp 27005/udp 27020/udp 51840
 
