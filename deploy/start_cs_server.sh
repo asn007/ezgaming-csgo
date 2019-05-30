@@ -3,7 +3,7 @@
 # Step 1. Install & update CSGO
 
 echo "Updating CS:GO..."
-/home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steam/csgo +app_update 740 validate quit
+/home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steam/csgo +app_update 740 validate +quit
 echo "Installing appid..."
 cp /deploy/steam_appid.txt /home/steam/csgo/steam_appid.txt /home/steam/csgo/steam_appid.txt
 echo "Installing configs..."
