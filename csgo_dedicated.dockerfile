@@ -13,7 +13,7 @@ ENV SRCDS_RCONPW="changeme"
 ENV SRCDS_PW="changeme"
 ENV SRCDS_NAME="yolo"
 
-RUN mkdir -p /home/steam/deploy
+RUN mkdir -p /home/steam/deploy && mkdir -p /home/steam/csgo
 
 USER root
 COPY ./deploy /home/steam/deploy
