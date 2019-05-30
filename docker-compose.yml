@@ -13,3 +13,4 @@ services:
       - "27036:27036/udp"
     volumes:
       - /opt/csgo-server:/home/steam/csgo
+      - /opt/csgo-config:/home/steam/csgoconfig
