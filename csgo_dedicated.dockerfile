@@ -13,10 +13,10 @@ ENV SRCDS_RCONPW="changeme"
 ENV SRCDS_PW="changeme"
 ENV SRCDS_NAME="yolo"
 
-RUN mkdir /deploy
+RUN mkdir -p /home/steam/deploy
 
-COPY ./deploy /deploy
-RUN chmod +x /deploy/start_cs_server.sh
+COPY ./deploy /home/steam/deploy
+RUN chmod +x /home/steam/deploy/start_cs_server.sh
 
 EXPOSE 27015 27015/udp 27005/udp 27020/udp 51840
 
@@ -55,4 +55,4 @@ VOLUME "/home/steam/csgoconfig"
 
 #EXPOSE 27015 27020 27005 51840
 
-ENTRYPOINT /deploy/start_cs_server.sh
+ENTRYPOINT /home/steam/deploy/start_cs_server.sh
