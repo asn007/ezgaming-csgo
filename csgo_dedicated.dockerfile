@@ -15,8 +15,10 @@ ENV SRCDS_NAME="yolo"
 
 RUN mkdir -p /home/steam/deploy
 
+USER root
 COPY ./deploy /home/steam/deploy
-RUN chmod +x /home/steam/deploy/start_cs_server.sh
+RUN chmod +x /home/steam/deploy/start_cs_server.sh && chown steam:steam /home/steam/deploy/start_cs_server.sh
+USER steam
 
 EXPOSE 27015 27015/udp 27005/udp 27020/udp 51840
 
