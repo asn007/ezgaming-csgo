@@ -17,7 +17,7 @@ chown -R steam:steam /home/steam
 echo "Preparing to launch CS:GO"
 cd /home/steam/csgo
 
-sudo -u steam ./srcds_run -game csgo -console -autoupdate -steam_dir /home/steam/steamcmd/ \
+./srcds_run -game csgo -console -autoupdate -steam_dir /home/steam/steamcmd/ \
 -usercon -port 27015 +clientport 27005 \
 +tv_port 27020 -tickrate ${SRCDS_TICKRATE} \
 +map de_dust2 +servercfgfile=/home/steam/csgoconfig/server.cfg \
