@@ -32,3 +32,4 @@ RUN su steam -c \
 USER steam
 
 VOLUME /home/steam/steamcmd
+EXPOSE 27036/udp
